@@ -49,12 +49,6 @@ module Draper
       end
     end
 
-    console do
-      require 'action_controller/test_case'
-      ApplicationController.new.view_context
-      Draper::ViewContext.build
-    end
-
     rake_tasks do
       Dir[File.join(File.dirname(__FILE__),'tasks/*.rake')].each { |f| load f }
     end
